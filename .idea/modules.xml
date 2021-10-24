@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PYQT_Demo.iml" filepath="$PROJECT_DIR$/.idea/PYQT_Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pachong_OA/.idea/pachong_OA.iml" filepath="$PROJECT_DIR$/../pachong_OA/.idea/pachong_OA.iml" />
     </modules>
   </component>
 </project>

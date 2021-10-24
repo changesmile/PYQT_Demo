@@ -9,6 +9,7 @@ from PyQt5.QtWidgets \
 import sys
 from PyQt5 import uic
 from suiji import Ui_MainWindow
+import random
 
 
 class SuiJiChouYang(QMainWindow):
@@ -28,6 +29,7 @@ class SuiJiChouYang(QMainWindow):
         print(all_num)
         print(check_num)
         info = self.ui.dataTextEdit.toPlainText()
+        suiji = []
         if all_num == '':
             QMessageBox.about(self, "警告", "输入总人数")
         elif check_num == '':
@@ -36,6 +38,13 @@ class SuiJiChouYang(QMainWindow):
             QMessageBox.about(self, "警告", "输入的随机数大于总人数")
         elif info == '':
             QMessageBox.about(self, "警告", "请输入要随机查询的人数")
+        else:
+            for line in info.splitlines():
+                suiji.append(line)
+            if len(suiji) >= int(all_num):
+                QMessageBox.about(self, "警告", "请输入的总人数和具体总数据不对")
+
+        QMessageBox.about(self, "输出结果", f"""抽到的结果如下：\n{random.sample(suiji, int(check_num))}""")
 
 
 if __name__ == '__main__':
